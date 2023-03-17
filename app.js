@@ -29,8 +29,10 @@ list.addEventListener('click', function(ev) {
 }, false);
 
 // Create a new list item when clicking on the "Add" button
-let toToLists =[];
+let toDoLists =[];
+
 function newElement() {
+  localStorage.setItem('todoItemsRef', JSON.stringify(toDoLists));
   let li = document.createElement("li");
   let inputValue = document.getElementById("myInput").value;
   let task = document.createTextNode(inputValue);
@@ -40,11 +42,9 @@ function newElement() {
   } else {
     document.getElementById("myUL").insertBefore(li, document.getElementById("myUL").childNodes[0])
   }
-  toToLists.push(myInput.value);
+  // console.log(toToLists.push(localStorage.getItem('value')));
+  toDoLists.push(myInput.value);
   document.getElementById("myInput").value = "";
-
-
-
 
   let span = document.createElement("SPAN");
   let txt = document.createTextNode("\u00D7");
@@ -59,3 +59,12 @@ function newElement() {
     }
   }
 }
+// document.addEventListener('DOMContentLoaded', () => {
+//   const ref = localStorage.getItem('todoItemsRef');
+//   if (ref) {
+//     toDoLists = JSON.parse(ref);
+//     toDoLists.forEach(task => {
+//       newElement();
+//     });
+//   }
+// });
