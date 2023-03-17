@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d825fc213e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./index.css">
+    <title>To do app</title>
+</head>
+<body>
+    <div class="todo-container" id="myDiv">
+        
+        <h1> my to do list</h1>
+        <p><i class="fa-solid fa-clipboard-list"></i></p>
+        <div class="input-form">
+            <input type="text" id="myInput" placeholder="Enter your items here" class="todo-input" autofocus>
+            <button onclick="newElement()" class="addBtn">Add</buttton>
+        </div>
+        
+        
+    </div>
+    <div class="empty-state">
+        <p class="empty-state-description">What do you want to get done today</p>
+    </div>
+    <div>
+        <ul class="item-list" id="myUl">
+            <li>Go to the Gym</li>
+            <li class="checked">Pay the bill</li>
+            <li>Buy egg</li>
+            <li>Read a book</li>
+            <li>Go to the market</li>
+        </ul>
+    </div>
+    
+    <script src="./app.js"></script>
+</body>
+</html>
