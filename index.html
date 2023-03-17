@@ -9,7 +9,7 @@
     <title>To do app</title>
 </head>
 <body>
-    <div class="todo-container" id="myDiv">
+    <!-- <div class="todo-container" id="myDiv">
         
         <h1> my to do list</h1>
         <p><i class="fa-solid fa-clipboard-list"></i></p>
@@ -24,7 +24,7 @@
         <p class="empty-state-description">What do you want to get done today</p>
     </div>
     <div>
-        <ul class="item-list" id="myUl">
+        <ul class="item-list" id="myUL">
             <li>Go to the Gym</li>
             <li class="checked">Pay the bill</li>
             <li>Buy egg</li>
@@ -32,7 +32,28 @@
             <li>Go to the market</li>
         </ul>
     </div>
-    
+     -->
+    <div id="myDIV" class="todo-container">
+        <h1> my to do list</h1>
+        <p><i class="fa-solid fa-clipboard-list"></i></p>
+        <div class="input-form">
+            <input type="text" id="myInput" placeholder="enter an item" autofocus>
+            <button onclick="newElement()" class= "addBtn">Add</button>  
+        </div>
+    </div>
+</div>
+<div class="empty-state">
+    <p class="empty-state-description">What do you want to get done today</p>
+</div>
+      
+      <ul id="myUL" class="list">
+        <!-- <li>Hit the gym</li>
+        <li class="checked">Pay bills</li>
+        <li>Meet George</li>
+        <li>Buy eggs</li>
+        <li>Read a book</li>
+        <li>Organize office</li> -->
+      </ul>
     <script src="./app.js"></script>
 </body>
 </html>
